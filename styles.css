@@ -41,7 +41,7 @@ body {
     overflow: hidden;
     border: 4px solid #5a5a5a; /* Optional: To add a border around the picture */
     flex-shrink: 0;
-    margin: 0 auto; /* Centers the image */
+    margin: 0; /* Hapus margin auto untuk memastikan foto tetap di kiri */
 }
 
 .profile-pic img {
@@ -77,27 +77,24 @@ body {
     color: #ffffff; /* Teks putih menyala */
 }
 
-.social-links a:hover {
+social-links a:hover {
     color: #0073e6; /* Change color on hover */
 }
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 600px) {
     .profile-section {
-        flex-direction: column;
-        text-align: center; /* Centers text on small screens */
+        flex-direction: row; /* Keep row direction */
+        text-align: left; /* Align text to the left */
     }
 
     .about-me {
-        margin-left: 0;
-        margin-top: 20px;
+        margin-left: 20px;
+        margin-top: 0;
+        flex: 1;
     }
 
     .profile-pic {
-        margin-bottom: 20px; /* Adds space between the picture and text on small screens */
-    }
-
-    .social-links ul {
-        padding-left: 0;
+        margin: 0; /* No margin for the profile picture */
     }
 }
